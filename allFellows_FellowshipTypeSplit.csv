@@ -1,0 +1,80 @@
+Host Institution,Latitude,Longitude,Number of Fellows,Number of Hubble Fellows,Number of Sagan Fellows,Number of Einstein Fellows
+California Institute of Technology,34.13701375,-118.1252882,56,29,15,12
+University of California Los Angeles,34.0708781,-118.4468497,11,8,3,0
+University of Minnesota,44.97780325,-93.23325103,2,2,0,0
+University of Hawaii,21.3320662,-157.9218882,19,14,3,2
+National Radio Astronomy Observatory,38.0368,-78.51797,4,3,0,1
+Jet Propulsion Laboratory,34.2018154,-118.1728888,13,5,5,3
+University of California Berkeley,37.8753497,-122.2396336,50,24,6,20
+Carnegie Observatories,34.1559434,-118.134449,35,30,2,3
+Princeton University,40.33867515,-74.65836549,37,21,4,12
+University of California Santa Cruz,37.00012445,-122.0622122,28,20,6,2
+University of Arizona,33.45205165,-112.0636789,32,19,9,4
+The University of Chicago,41.79139685,-87.60084387,19,11,3,5
+University of Michigan,42.2942142,-83.71003894,14,6,3,5
+Columbia University,40.80775585,-73.96164947,14,9,0,5
+University of Pittsburgh,40.44415295,-79.96246095,1,1,0,0
+Bowling Green State University,41.3811929,-83.62981099,1,1,0,0
+University of Texas Austin,30.2852198,-97.73389273,16,13,3,0
+The Ohio State University,40.00570905,-83.02866466,5,3,2,0
+University of Washington,47.6543238,-122.3080089,10,6,4,0
+Massachusetts Institute of Technology,42.3582393,-71.09663495,34,15,4,15
+University of Massachusetts Amherst,42.3869382,-72.52991477,3,3,0,0
+Johns Hopkins University,39.33020225,-76.62185358,16,11,0,5
+Kitt Peak National Observatory,31.96005045,-111.5980625,5,5,0,0
+San Francisco State University,37.7245167,-122.4800002,1,1,0,0
+Center for Astrophysics,42.38142005,-71.12838256,60,32,15,13
+Lawrence Berkeley National Laboratory,37.87695875,-122.2456303,16,8,0,8
+Institute for Advanced Study,40.3322547,-74.66578774,37,24,3,10
+Space Telescope Science Institute,39.3329284,-76.623172,12,9,3,0
+Case Western University,41.50138695,-81.60070216,1,1,0,0
+JILA,40.00827,-105.269203,2,2,0,0
+Yale University,41.25713055,-72.9896696,11,6,1,4
+Harvard University,42.36790855,-71.12678237,26,8,4,14
+Kavli Institute for Astrophysics and Space Research,42.35984,-71.09125,1,1,0,0
+Lunar and Planetary Laboratory,32.232559,-110.9472127,2,1,1,0
+Carnegie Institute for Science,38.9588249,-77.06274168,11,8,2,1
+University of Maryland College Park,38.990547,-76.937251,9,3,1,5
+University of Colorado Boulder,40.00687815,-105.272776,14,8,1,5
+National Optical Astronomy Observatory,32.2331721,-110.9478175,10,5,5,0
+Arizona State University,33.4213467,-111.9331583,5,3,1,1
+North Carolina State University,35.77184965,-78.67408695,1,1,0,0
+Northwestern University,42.0551164,-87.67581113,5,2,0,3
+Pennsylvania State University,40.71248635,-77.94917058,4,2,1,1
+University of Wisconsin Madison,43.07982815,-89.43066425,7,5,1,1
+Iowa State University,42.02791015,-93.64464415,1,1,0,0
+University of North Carolina Chapel Hill,35.90503535,-79.04775327,1,1,0,0
+American Museum of Natural History,40.7810974,-73.97424766,4,1,3,0
+Los Alamos National Laboratory,35.81831485,-106.265428,1,1,0,0
+Steward Observatory,32.23309045,-110.9484977,2,1,1,0
+Yerkes Observatory,42.5703443,-88.55633844,1,1,0,0
+University of California San Diego,32.87924375,-117.2311247,3,1,1,1
+Cornell University,42.4505507,-76.4783513,5,1,2,2
+University of California Santa Barbara,34.41460245,-119.84581,7,4,1,2
+Stanford University,37.43131385,-122.1693654,15,3,1,11
+University of California Irvine,33.6431901,-117.8401649,3,3,0,0
+Goddard Space Flight Center,38.99983125,-76.84586127,2,1,1,0
+University of Virginia,38.0410576,-78.5054996,3,2,0,1
+NASA Ames Research Center,37.4198292,-122.0639394,4,1,3,0
+University of Illinois Urbana-Champaign,40.10056605,-88.23131272,1,1,0,0
+Boston University,42.3501894,-71.10070118,4,2,0,2
+New Mexico State University,32.2729032,-106.7434927,1,1,0,0
+University of California Davis,38.53345925,-121.7478059,2,2,0,0
+New York University,40.72925325,-73.99625394,3,1,1,1
+Lawrence Livermore National Laboratory,37.687781,-121.7083093,2,1,1,0
+The Enrico Fermi Institute,41.791986,-87.60171038,1,1,0,0
+Georgia State University,33.75476135,-84.38819218,1,1,0,0
+Lowell Observatory,35.20294505,-111.6646534,1,1,0,0
+Lick Observatory,37.34318095,-121.6452932,1,1,0,0
+University of Florida,29.6328784,-82.34901329,1,0,1,0
+Kavli Institute for Cosmological Physics,41.79254,-87.60167,1,0,1,0
+United States Naval Observatory,38.92141355,-77.06700993,1,0,1,0
+Southwest Research Institute,29.44412035,-98.61361086,2,0,2,0
+University of Pennsylvania,39.9493382,-75.18964403,2,0,1,1
+Texas Tech University,33.59375255,-101.8995955,1,0,0,1
+Fellow at Large,nan,nan,1,0,0,1
+Rutgers University,40.50007595,-74.44579152,3,0,0,3
+Stanford Linear Accelerator Center National Accelerator Laboratory,37.41683975,-122.2046996,3,0,0,3
+Kavli Institute for Theoretical Physics,34.41681,-119.84855,1,0,0,1
+Purdue University,40.4300927,-86.92651297,1,0,0,1
+Rice University,29.71679145,-95.40478113,1,0,0,1
