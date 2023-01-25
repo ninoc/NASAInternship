@@ -3,7 +3,7 @@ import folium
 import json
 from folium import plugins
 
-def mapMaker(FellowsFile, HSIFile, BSIFile, HBCUFile, R2File):
+def mapMaker(FellowsFile, MSIR2File):
     '''
     This function takes in the necessary files to build the NHFP Map with surrounding insitutions. 
     All inputs are string file names or directory maps.
@@ -19,14 +19,25 @@ def mapMaker(FellowsFile, HSIFile, BSIFile, HBCUFile, R2File):
     
     # STEP 1: Read in files
     allFellows = pd.read_csv(FellowsFile)
-    HSIs = pd.read_csv(HSIFile)
-    HBCUs = pd.read_csv(BSIFile)
-    BSIs = pd.read_csv(HBCUFile)
-    R2s = pd.read_csv(R2File)
+    #HSIs = pd.read_csv(HSIFile)
+    #HBCUs = pd.read_csv(BSIFile)
+    #BSIs = pd.read_csv(HBCUFile)
+    #R2s = pd.read_csv(R2File)
+    MSIs = pd.read_csv(MSIR2File)
     
-    HSIs = HSIs[HSIs['Astronomy Faculty (Y/N)'] != 'N']
-    HBCUs = HBCUs[HBCUs['Astronomy Faculty (Y/N)'] != 'N']
-    BSIs = BSIs[BSIs['Astronomy Faculty (Y/N)'] != 'N']
+    HSIs = MSIs[MSIs['Classification'] == 'HSI']
+    HSIs = HSIs[HSIs['Numerous Astronomy Faculty (Y/N)'] != 'N']
+    
+    HBCUs = MSIs[MSIs['Classification'] == 'HBCU']
+    HBCUs = HBCUs[HBCUs['Numerous Astronomy Faculty (Y/N)'] != 'N']
+    
+    BSIs = MSIs[MSIs['Classification'] == 'BSI']
+    BSIs = BSIs[BSIs['Numerous Astronomy Faculty (Y/N)'] != 'N']
+    
+    R2s = MSIs[MSIs['Research Classification'] == 'R2']
+    R2s = R2s[R2s['Classification'] != 'HSI']
+    R2s = R2s[R2s['Classification'] != 'BSI']
+    R2s = R2s[R2s['Classification'] != 'HBCU']
     R2s = R2s[R2s['Numerous Astronomy Faculty (Y/N)'] != 'N']
     
     # STEP 2: Initialize map
@@ -69,7 +80,7 @@ def mapMaker(FellowsFile, HSIFile, BSIFile, HBCUFile, R2File):
     for i in range(len(BSIs)):
         try:
             folium.Marker(
-                location = [BSIs.values[i][8], BSIs.values[i][9]],
+                location = [BSIs.values[i][9], BSIs.values[i][10]],
                 popup = BSIs.values[i][0],
                 icon = folium.Icon(color = 'darkpurple', icon_color = 'white', icon = 'circle'),
                 fill = True,
@@ -85,7 +96,7 @@ def mapMaker(FellowsFile, HSIFile, BSIFile, HBCUFile, R2File):
     for i in range(len(HSIs)):
         try:
             folium.Marker(
-                location = [HSIs.values[i][8], HSIs.values[i][9]],
+                location = [HSIs.values[i][9], HSIs.values[i][10]],
                 popup = HSIs.values[i][0],
                 icon = folium.Icon(color = 'blue', icon_color = 'white', icon = 'circle'),
                 fill = True,
@@ -101,7 +112,7 @@ def mapMaker(FellowsFile, HSIFile, BSIFile, HBCUFile, R2File):
     for i in range(len(HBCUs)):
         try:
             folium.Marker(
-                location = [HBCUs.values[i][8], HBCUs.values[i][9]],
+                location = [HBCUs.values[i][9], HBCUs.values[i][10]],
                 popup = HBCUs.values[i][0],
                 icon = folium.Icon(color = 'darkblue', icon_color = 'white', icon = 'circle'),
                 fill = True,
@@ -131,6 +142,6 @@ def mapMaker(FellowsFile, HSIFile, BSIFile, HBCUFile, R2File):
     folium.LayerControl(collapsed = False).add_to(usMap)
     
     # STEP 9: Download map
-    usMap.save('NHFPFellowsMap.html')
+    #usMap.save('NHFPFellowsMap.html')
     
     return usMap
