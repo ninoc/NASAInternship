@@ -930,4 +930,44 @@ def expertiseFinder_singleName(token, directorypath, name, inst):
     top10Df, top10DirtyDf = step8(mergedDataDf, mergedDirtyDf, directorypath)
     
     # STEP 9: 
-    return top10Df, top10DirtyDf    
+    return top10Df, top10DirtyDf   
+
+######################################################################################################################################################################################################################################################################################################################################################################################################
+
+def instFinder(token, instName):
+    '''
+    This function takes in an institution name and returns a non-duplicate list of all of the faculty with said institution in their first author affiliation.
+    
+    token = a NASA ADS API token (string)
+    instName = the name of the institution (string)
+    '''
+    ads.config.token = token
+    
+    # STEP 1: Search ADS for results
+    query = ads.SearchQuery(aff = '^'+instName, 
+                            property = 'refereed', 
+                            sort = 'citation_count', 
+                            database = 'astronomy')
+    
+    # STEP 2: Pull out author information
+    query = ads.SearchQuery(aff = '^'+affiliation, 
+                                      property = 'refereed', 
+                                      sort = 'citation_count', 
+                                      database = 'astronomy')
+    
+    # STEP 3: Find first authors
+    authors = []
+    for paper in query:
+        authors.append(paper.author[0])
+    
+    # STEP 4: Remove duplicates
+    nodup = []
+    [nodup.append(item) for item in authors if item not in nodup]
+    
+    # STEP 5: Sort alphebetically
+    nodup.sort()
+
+    # STEP 6: Return list
+    return nodup
+
+######################################################################################################################################################################################################################################################################################################################################################################################################
